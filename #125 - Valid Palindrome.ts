@@ -20,9 +20,10 @@ function isPalindrome(s: string): boolean {
     if (convertedString[leftPointer] !== convertedString[rightPointer]) {
       validPalindrome = false;
       break;
+    }else{
+      leftPointer++;
+      rightPointer--;
     }
-    leftPointer++;
-    rightPointer--;
   }
   function isValidAscii(character: string): boolean {
     let code = character.charCodeAt(0);
