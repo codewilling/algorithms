@@ -50,13 +50,13 @@ function threeSum(nums: number[]): number[][] {
     }
     let midPointer = i + 1;
     let highPointer = sortedNums.length - 1;
-    console.log(lowPointer, midPointer, highPointer)
+    console.log(lowPointer, midPointer, highPointer);
     while (midPointer < highPointer) {
       let sum =
         sortedNums[lowPointer] +
         sortedNums[midPointer] +
         sortedNums[highPointer];
-        console.log(sum)
+      console.log(sum);
       if (sum < 0) {
         midPointer++;
       } else if (sum > 0) {
@@ -64,15 +64,18 @@ function threeSum(nums: number[]): number[][] {
       } else {
         result.push([
           sortedNums[lowPointer],
-            sortedNums[midPointer],
-            sortedNums[highPointer],
+          sortedNums[midPointer],
+          sortedNums[highPointer],
         ]);
-        console.log(result)
-        midPointer++
-        while(sortedNums[midPointer] === sortedNums[midPointer-1] && midPointer<highPointer){
-          midPointer++
+        console.log(result);
+        midPointer++;
+        while (
+          sortedNums[midPointer] === sortedNums[midPointer - 1] &&
+          midPointer < highPointer
+        ) {
+          midPointer++;
         }
-        console.log(midPointer)
+        console.log(midPointer);
       }
     }
   }
@@ -80,4 +83,13 @@ function threeSum(nums: number[]): number[][] {
   return result;
 }
 
-console.log(threeSum([-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6]));
+console.log(threeSum([-4, -2, -2, -2, 0, 1, 2, 2, 2, 3, 3, 4, 4, 6, 6]));
+
+// Runtime
+// Details
+// 161ms
+// Beats 83.96%of users with TypeScript
+// Memory
+// Details
+// 59.17MB
+// Beats 64.88%of users with TypeScript
