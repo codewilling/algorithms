@@ -44,3 +44,12 @@ function maxArea(height: number[]) {
 }
 
 console.log(maxArea(height));
+
+// Runtime
+// Details
+// 76ms
+// Beats 59.46%of users with TypeScript
+// Memory
+// Details
+// 50.56MB
+// Beats 97.67%of users with TypeScript
