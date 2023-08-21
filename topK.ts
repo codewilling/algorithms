@@ -46,7 +46,6 @@ function topKFrequent(nums: number[], k: number): number[] {
       count.set(key, 1);
     }
   }
-  console.log(count);
   //create an array from the map, using the amount of times a number appears as the index and storing the number at that index
   // let arrayCount = [...count]
   // console.log(arrayCount)
